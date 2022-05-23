@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "https://blog.maloo.ski/static/js/main.259581b0.js",
+    "static/js/728.3550295c.chunk.js": "https://blog.maloo.ski/static/js/728.3550295c.chunk.js",
+    "static/js/787.f587e8d5.chunk.js": "https://blog.maloo.ski/static/js/787.f587e8d5.chunk.js",
+    "static/js/39.6e287a19.chunk.js": "https://blog.maloo.ski/static/js/39.6e287a19.chunk.js",
+    "static/js/149.01f5b04d.chunk.js": "https://blog.maloo.ski/static/js/149.01f5b04d.chunk.js",
+    "static/js/683.6cc5d481.chunk.js": "https://blog.maloo.ski/static/js/683.6cc5d481.chunk.js",
+    "static/media/Logo.png": "https://blog.maloo.ski/static/media/Logo.44a5e8e058e490fa9382.png",
+    "index.html": "https://blog.maloo.ski/index.html",
+    "static/media/vr-endangered.md": "https://blog.maloo.ski/static/media/vr-endangered.ae6ac9b8f2bdb921f584.md",
+    "static/media/fix-it-discord.md": "https://blog.maloo.ski/static/media/fix-it-discord.1b1eeff49e65bb9b39f2.md",
+    "static/media/blogging-for-free.md": "https://blog.maloo.ski/static/media/blogging-for-free.31d6cfe0d16ae931b73c.md",
+    "main.259581b0.js.map": "https://blog.maloo.ski/static/js/main.259581b0.js.map",
+    "728.3550295c.chunk.js.map": "https://blog.maloo.ski/static/js/728.3550295c.chunk.js.map",
+    "787.f587e8d5.chunk.js.map": "https://blog.maloo.ski/static/js/787.f587e8d5.chunk.js.map",
+    "39.6e287a19.chunk.js.map": "https://blog.maloo.ski/static/js/39.6e287a19.chunk.js.map",
+    "149.01f5b04d.chunk.js.map": "https://blog.maloo.ski/static/js/149.01f5b04d.chunk.js.map",
+    "683.6cc5d481.chunk.js.map": "https://blog.maloo.ski/static/js/683.6cc5d481.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.259581b0.js"
+  ]
+}

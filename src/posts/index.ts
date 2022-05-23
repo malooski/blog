@@ -5,6 +5,7 @@ export interface PostMetadata {
     updatedAt?: Date;
     contentUrl: string;
     tags?: string[];
+    wip?: boolean;
 }
 
 export const POSTS: PostMetadata[] = [
@@ -14,6 +15,7 @@ export const POSTS: PostMetadata[] = [
         createdAt: new Date("2022-05-21T08:27:32.759Z"),
         contentUrl: require("./fix-it-discord.md"),
         tags: ["discord"],
+        wip: true,
     },
     {
         title: "Coding your own blog site",
@@ -21,6 +23,7 @@ export const POSTS: PostMetadata[] = [
         createdAt: new Date("2022-05-21T08:27:32.759Z"),
         contentUrl: require("./blogging-for-free.md"),
         tags: ["dev"],
+        wip: true,
     },
     {
         title: "VR's Future Is Endangered",
@@ -28,5 +31,6 @@ export const POSTS: PostMetadata[] = [
         createdAt: new Date("2022-05-21T08:27:32.759Z"),
         contentUrl: require("./vr-endangered.md"),
         tags: ["vr"],
+        wip: true,
     },
 ];

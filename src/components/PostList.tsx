@@ -12,7 +12,6 @@ const RootDiv = styled.div`
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 0.3em 1em;
-    font-size: 0.8em;
 `;
 
 const TitleSpan = styled.span``;

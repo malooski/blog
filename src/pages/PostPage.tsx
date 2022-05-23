@@ -2,6 +2,7 @@ import axios from "axios";
 import { formatDistanceToNow } from "date-fns";
 import styled from "styled-components";
 import Markdown from "../components/Markdown";
+import TagBadge from "../components/TagBadge";
 import { PostMetadata } from "../posts";
 import { useAsyncMemo } from "../util/hooks/use_async_memo";
 import BasePage from "./BasePage";
@@ -29,14 +30,6 @@ const PostInfoDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-`;
-
-const TagSpan = styled.span`
-    font-size: 0.75em;
-    padding: 0.3em 0.6em;
-    background-color: #7365a6;
-    color: white;
-    border-radius: 1em;
 `;
 
 const TagsDiv = styled.div`
@@ -86,7 +79,7 @@ export default function PostPage(props: PostPageProps) {
                         <DateSpan title={updatedAtDate}>{updatedAtText}</DateSpan>
                         <TagsDiv>
                             {tags.map(t => (
-                                <TagSpan>{t}</TagSpan>
+                                <TagBadge tag={t} />
                             ))}
                         </TagsDiv>
                     </PostInfoDiv>

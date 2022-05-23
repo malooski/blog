@@ -1,9 +1,7 @@
-import { sortBy, take } from "lodash";
-import { useMemo } from "react";
 import styled from "styled-components";
 import malooLogo from "../assets/Logo.png";
-import PostList from "../components/PostList";
-import { POSTS } from "../posts";
+import { LatestsPosts } from "../components/LatestPosts";
+import PopularTags from "../components/PopularTags";
 import { middleChildSelector } from "../util/css";
 
 const BorderDiv = styled.div`
@@ -50,6 +48,10 @@ const InnerDiv = styled.div`
         "body   body   latest-posts" 1fr
         "footer footer footer" auto
         / 1fr auto auto;
+
+    @media (max-width: 1200px) {
+        grid-template: "";
+    }
 `;
 
 const LogoImg = styled.img`
@@ -70,30 +72,16 @@ const BodyDiv = styled.div`
     grid-area: body;
     flex-grow: 1;
     margin: 0 2em 2em 2em;
+
+    display: flex;
+    flex-direction: column;
 `;
 
-const LatestPostsDiv = styled.div`
+const RightPaneDiv = styled.div`
     grid-area: latest-posts;
-
-    & > div {
-        display: flex;
-        flex-direction: column;
-        grid-area: latest-posts;
-        padding: 1.25em;
-        margin: 0 2em 2em 0em;
-        border-radius: 2em;
-        border: 1px solid #646075;
-
-        background-color: #3b3846;
-
-        & > h3 {
-            margin: 0 0 0.5em 0;
-            padding: 0;
-
-            text-align: center;
-        }
-    }
 `;
+
+const TagsDiv = styled.div``;
 
 const FooterDiv = styled.div`
     font-size: 8pt;
@@ -127,15 +115,6 @@ export interface BasePageProps {
 }
 
 export default function BasePage(props: BasePageProps) {
-    const latestPosts = useMemo(
-        () =>
-            take(
-                sortBy(POSTS, p => p.updatedAt ?? p.createdAt),
-                5
-            ),
-        []
-    );
-
     return (
         <BorderDiv>
             <InnerDiv>
@@ -143,12 +122,11 @@ export default function BasePage(props: BasePageProps) {
                     <LogoImg loading="lazy" src={malooLogo} />
                 </HeaderDiv>
                 <BodyDiv>{props.children}</BodyDiv>
-                <LatestPostsDiv>
-                    <div>
-                        <h3>Latest Posts</h3>
-                        <PostList posts={latestPosts} />
-                    </div>
-                </LatestPostsDiv>
+                <RightPaneDiv>
+                    <LatestsPosts count={5} />
+
+                    <PopularTags />
+                </RightPaneDiv>
 
                 <FooterDiv>
                     <div></div>
